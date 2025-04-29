@@ -15,3 +15,15 @@ console.log(tot)
 
 const eta = prompt("quanti anni hai?");
 console.log(eta)
+
+let sconto = 0;
+
+if (eta < 18) {
+  sconto = 0.20;
+} else if (eta > 65) {
+  sconto = 0.40;
+}
+
+const prezzoFinale = tot * (1 - sconto);
+
+console.log(`Prezzo finale: ${prezzoFinale.toFixed(2)}€`);
